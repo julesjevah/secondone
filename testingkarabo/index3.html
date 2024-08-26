@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Our New Website</title>
+    <style>
+        /* Styling for the popup container */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        /* Styling for the heading */
+        .popup h2 {
+            color: #3F4096; /* Color for the "Visit Our New Website" text */
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        /* Container for the laptop */
+        .laptop-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for the laptop screen */
+        .laptop-screen {
+            width: 320px;
+            height: 200px;
+            background-color: #333;
+            border-radius: 12px 12px 0 0;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* The image inside the laptop screen */
+        .laptop-screen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px 12px 0 0;
+        }
+
+        /* The laptop base */
+        .laptop-base {
+            width: 340px;
+            height: 20px;
+            background-color: #333;
+            margin: 0 auto;
+            border-radius: 0 0 12px 12px;
+            position: relative;
+            top: -5px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Adding a small shadow to create a separation effect */
+        .laptop-container::before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 320px;
+            height: 10px;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+        }
+
+        /* Styling for the button */
+        .popup button {
+            background-color: rgb(121, 72, 73); /* Background color for the button */
+            color: #fff; /* White text color */
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-transform: uppercase; /* Text in uppercase */
+            font-weight: bold;
+        }
+
+        /* Optional: Hover effect for the button */
+        .popup button:hover {
+            background-color: rgb(101, 62, 63); /* Slightly darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- The Popup Form -->
+    <div class="popup" id="visitPopup">
+        <h2>Visit Our New Website</h2>
+        <!-- Simulated laptop screen with image -->
+        <div class="laptop-container">
+            <div class="laptop-screen">
+                <img src="erickalabo.png" alt="Visit our new website">
+            </div>
+            <div class="laptop-base"></div>
+        </div>
+        <p>acornskigali.com</p>
+        <a href="https://acornskigali.com/" target="_blank"><button>Click Here</button></a>
+    </div>
+
+    <script>
+        // JavaScript to show the popup after 1 minute
+        setTimeout(function() {
+            document.getElementById('visitPopup').style.display = 'block';
+        }, 5000); // 60000 milliseconds = 1 minute
+    </script>
+
+</body>
+</html>
